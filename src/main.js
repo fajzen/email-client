@@ -1,6 +1,16 @@
 import Vue from "vue";
+import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import App from "./App.vue";
 import store from "./store";
+import formatTimestamp from "./filters/formatTimestamp";
+
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+
+Vue.use(BootstrapVue);
+Vue.use(IconsPlugin);
+
+Vue.filter("formatTimestamp", formatTimestamp);
 
 Vue.config.productionTip = false;
 
